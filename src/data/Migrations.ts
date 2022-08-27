@@ -5,8 +5,16 @@ class Migrations extends BaseDatabase {
     BaseDatabase.connection
       .raw(
         `
-      CREATE TABLE IF NOT EXISTS Bikes(
-        id VARCHAR(255) PRIMARY KEY
+        CREATE TABLE IF NOT EXISTS Project(
+        id VARCHAR(255) PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        description VARCHAR(500) NOT NULL,
+        repository VARCHAR(255) NOT NULL,
+        deploy VARCHAR(255) NOT NULL,
+        technologies VARCHAR(300) NOT NULL,
+        img1 VARCHAR(500) NOT NULL,
+        img2 VARCHAR(500),
+        img3 VARCHAR(500)
       );
     `
       )
