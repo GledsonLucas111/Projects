@@ -21,6 +21,17 @@ export class ProjectDatabase extends BaseDatabase {
       throw new Error(e.sqlMessage || e.message);
     }
   };
+  
+  getProjectById = async (id: string): Promise<Project> => {
+    try {
+      const result = await BaseDatabase.connection(ProjectDatabase.TABLE_NAME)
+        .select("*")
+        .where({ id });
+      return result[0];
+    } catch (e: any) {
+      throw new Error(e.sqlMessage || e.message);
+    }
+  };
 
   getAllProjects = async (): Promise<Project[]> => {
     try {

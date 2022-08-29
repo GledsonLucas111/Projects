@@ -16,11 +16,26 @@ export class ProjectController {
         technologies: req.body.technologies,
         img1: req.body.img1,
         img2: req.body.img2,
-        img3: req.body.img3
+        img3: req.body.img3,
       };
       await this.projectBusiness.insertProject(input);
 
       res.status(201).send({ message: "Project inserted successfully" });
+    } catch (e) {
+      if (e instanceof CustomError) {
+        res.status(e.statusCode).send(e.message);
+      } else if (e instanceof Error) {
+        res.status(400).send(e.message);
+      }
+    }
+  };
+  getProjectById = async (req: Request, res: Response) => {
+    try {
+      const id = req.params.id;
+
+      const result = await this.projectBusiness.getProjectById(id);
+      
+      res.status(200).send(result);
     } catch (e) {
       if (e instanceof CustomError) {
         res.status(e.statusCode).send(e.message);

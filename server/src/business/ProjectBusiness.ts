@@ -42,7 +42,13 @@ export class ProjectBusiness {
 
     await this.projectDataBase.insert(project);
   };
-
+  getProjectById = async (id: string) => {
+    if (!id) {
+      throw new CustomError(422, "Preecha o path params");
+    }
+    const result = await this.projectDataBase.getProjectById(id);
+    return result;
+  };
   getAllProjects = async () => {
     const result = await this.projectDataBase.getAllProjects();
     return result;

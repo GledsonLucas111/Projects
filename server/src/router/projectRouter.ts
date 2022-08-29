@@ -15,4 +15,5 @@ const projectController = new ProjectController(projectBusiness);
 
 projectRouter.post("/", projectController.insertProject);
 projectRouter.get("/", projectController.getAllProjects);
+projectRouter.get("/:id", projectController.getProjectById);
 projectRouter.delete("/", projectController.deleteProject);
