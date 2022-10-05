@@ -17,9 +17,7 @@ export class ProjectBusiness {
       repository,
       deploy,
       technologies,
-      img1,
-      img2,
-      img3,
+      img
     } = input;
 
     if (!name || !description|| !repository || !deploy || !technologies) {
@@ -35,9 +33,7 @@ export class ProjectBusiness {
       repository,
       deploy,
       technologies,
-      img1,
-      img2,
-      img3
+      img
     );
 
     await this.projectDataBase.insert(project);

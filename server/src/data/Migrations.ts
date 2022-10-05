@@ -12,9 +12,7 @@ class Migrations extends BaseDatabase {
         repository VARCHAR(255) NOT NULL,
         deploy VARCHAR(255) NOT NULL,
         technologies VARCHAR(300) NOT NULL,
-        img1 VARCHAR(500) NOT NULL,
-        img2 VARCHAR(500),
-        img3 VARCHAR(500)
+        img VARCHAR(500) NOT NULL
       );
     `
       )

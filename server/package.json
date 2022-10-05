@@ -7,7 +7,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest",
     "dev": "ts-node-dev ./src/index.ts",
     "migrations": "tsnd ./src/data/Migrations.ts",
     "start": "tsc && node ./build/src/index.js"
@@ -32,14 +31,14 @@
     "@types/knex": "^0.16.1",
     "@types/mysql": "^2.15.21",
     "@types/uuid": "^8.3.4",
-    "jest": "^28.1.1",
+    "dotenv": "^16.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.1.0",

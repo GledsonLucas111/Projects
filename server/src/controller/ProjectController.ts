@@ -14,9 +14,7 @@ export class ProjectController {
         repository: req.body.repository,
         deploy: req.body.deploy,
         technologies: req.body.technologies,
-        img1: req.body.img1,
-        img2: req.body.img2,
-        img3: req.body.img3,
+        img: req.body.img,
       };
       await this.projectBusiness.insertProject(input);
 

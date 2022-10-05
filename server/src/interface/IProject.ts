@@ -4,7 +4,5 @@ export interface IProjectDTO {
     repository: string,
     deploy: string,
     technologies: string,
-    img1: string,
-    img2: string,
-    img3: string
+    img: string
 }

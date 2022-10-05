@@ -13,9 +13,7 @@ export class ProjectDatabase extends BaseDatabase {
         repository: project.getRepository(),
         deploy: project.getDeploy(),
         technologies: project.getTechnologies(),
-        img1: project.getImg1(),
-        img2: project.getImg2(),
-        img3: project.getImg3(),
+        img: project.getImg()
       });
     } catch (e: any) {
       throw new Error(e.sqlMessage || e.message);

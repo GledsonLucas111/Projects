@@ -6,9 +6,7 @@ export class Project {
     private repository: string,
     private deploy: string,
     private technologies: string,
-    private img1: string,
-    private img2: string,
-    private img3: string
+    private img: string
   ) {}
 
   getId = (): string => {
@@ -29,14 +27,8 @@ export class Project {
   getTechnologies = (): string => {
     return this.technologies;
   };
-  getImg1 = (): string => {
-    return this.img1;
-  };
-  getImg2 = (): string => {
-    return this.img2;
-  };
-  getImg3 = (): string => {
-    return this.img3;
+  getImg = (): string => {
+    return this.img;
   };
   
   setId = (id: string) => {
