@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts",
-    "migrations": "tsnd ./build/src/data/Migrations.js",
+    "migrations": "tsnd ./src/data/Migrations.ts",
     "start": "tsc && node ./build/src/index.js"
   },
   "repository": {
