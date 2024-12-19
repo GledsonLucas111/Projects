@@ -12,7 +12,6 @@ export abstract class BaseDatabase {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABSE,
       port: Number(process.env.DB_PORT),
-      multipleStatements: true,
     },
   });
 }
