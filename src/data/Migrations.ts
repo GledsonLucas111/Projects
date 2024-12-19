@@ -21,7 +21,10 @@ class Migrations extends BaseDatabase {
       })
       .catch((error) => {
         console.log(error.message);
-      });
+      })
+      .finally(() => {
+        process.exit(0)
+      })
   };
 }
 const migrations: Migrations = new Migrations();

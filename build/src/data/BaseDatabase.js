@@ -18,7 +18,6 @@ BaseDatabase.connection = (0, knex_1.default)({
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DATABSE,
         port: Number(process.env.DB_PORT),
-        multipleStatements: true,
     },
 });
 //# sourceMappingURL=BaseDatabase.js.map

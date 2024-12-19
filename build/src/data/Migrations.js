@@ -22,6 +22,9 @@ class Migrations extends BaseDatabase_1.BaseDatabase {
             })
                 .catch((error) => {
                 console.log(error.message);
+            })
+                .finally(() => {
+                process.exit(0);
             });
         };
     }
